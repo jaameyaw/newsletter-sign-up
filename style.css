@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Roboto", sans-serif;
+    background-color: hsl(235, 18%, 26%);
+}
+
+
+main {
+    display: flex;
+    border-radius: 20px;
+    background-color: hsl(0, 0%, 100%);
+    height: 76.5vh;
+    box-shadow: rgba(0, 0, 0, 0.3) -4px 9px 25px -6px;
+    
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 390px;
+    margin-left: 40px;
+    margin-top: 70px;
+    margin-bottom: -12px;
+}
+
+.content h1 {
+    font-size: 45px;
+    padding-bottom: 13px;
+    color: hsl(235, 18%, 26%);
+}
+
+.updates {
+    font-size: 15px;
+    line-height: 1.4;
+    color: hsl(234, 29%, 20%);
+    font-weight: 500;
+    padding-bottom: 16px;
+   
+}
+
+.lists li {
+    list-style-type: none;
+    padding-bottom: 11px;
+    color: hsl(234, 29%, 20%);
+    font-weight: 500;
+    font-size: 14px;
+    position: relative;
+    margin-left: 40px;   
+}
+
+.lists li::before {
+    content: url("/Newsletter sign up/assets/images/icon-list.svg"); 
+    display: inline-block;
+    position: absolute;
+    bottom: 6px;
+    left: -35px;   
+}
+
+
+.newsletter-form {
+    margin-top: 20px;
+}
+
+.newsletter-form label {
+    font-size: 15px;
+    color: hsl(234, 29%, 20%);
+    line-height: .3;
+    font-weight: 700;
+}
+
+.error-msg {
+    padding-left: 120px;
+    line-height: .3;
+    font-size: 13px;
+    /* color: hsl(4, 68%, 45%); */
+    color: #ff2851;
+    display: none;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+}
+
+input {
+    margin-top: 10px;
+    border: 1px solid hsl(231, 7%, 60%);
+    font-family: "Roboto", sans-serif;
+    color: black;
+    font-weight: 500;
+    transition: .4s;
+}
+
+input:focus {
+    outline: none; 
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+}
+
+input::placeholder {
+    color: hsl(231, 7%, 60%);
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+input, button {
+    width: 86%;
+    padding: 15px;
+    border-radius: 6px;  
+}
+
+button {
+    margin-top: 19px;
+    border: none;
+    background-color: hsl(234, 29%, 20%);
+    color: hsl(0, 0%, 100%);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    transition: 0.5s;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: 0 0.7em 1.5em -0.5em rgba(255, 98, 87, 0.7);
+    background-color: hsl(4, 100%, 67%);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.imageSvg {
+    width: 340px;
+}
+
+.image {
+    height: 500px;
+    width: 430px;
+    padding-top: 20px;
+    margin-left: -55px;
+}
+
+
+@media (max-width: 768px) {
+    main {
+        height: 100vh;
+    }
+
+    .image {
+        width: 370px;
+        height: 490px;
+    }
+}
+
+@media (max-width: 430px) {
+    body {
+        background-color: white;
+        
+    }
+    main {
+        box-shadow: none;
+        display: grid
+
+    }
+
+    .content {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 13px;
+    }
+
+    .content h1 {
+        font-size: 35px;
+        margin-top: 31px;
+    }
+
+    .updates {
+        margin-top: 16px;
+        font-size: 17px;
+    }
+
+    .lists {
+        margin-top: 16px;
+    }
+
+    .lists li {
+        padding-bottom: 9px;
+    }
+
+    .lists li::before {
+        bottom: 11px;
+    }
+  
+    .imageSvg {
+        width: 100%;
+        min-height: 20vh;
+        background-image: url("/Newsletter sign up/assets/images/illustration-sign-up-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 0 0 17px 17px;
+        grid-row: 1 / 2;
+    }
+
+    .image {
+        display: none;
+    }
+
+}
+
+/* appreciate */
+section {
+    display: flex;
+    flex-direction: column;
+    width: 430px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: rgba(0, 0, 0, 0.3) -4px 9px 25px -6px;
+    border-radius: 20px;
+    padding: 50px 45px;
+}
+
+section img {
+    height: 50px;
+    width: 50px;
+}
+
+section h1 {
+    padding-top: 25px;
+    color: hsl(235, 18%, 26%);
+    font-size: 45px;
+    letter-spacing: .2px;
+    line-height: 1;
+
+}
+
+section p {
+    font-size: 15px;
+    color: hsl(235, 18%, 26%);
+    font-weight: 400;
+    padding-top: 20px;
+    width: 350px;
+}
+
+section p span {
+    font-weight: 600;
+}
+
+.btn {
+    margin-top: 24px;
+    width: 100%;
+    padding: 17px;
+    font-family: "Roboto", sans-serif;
+}
+
+
+@media (max-width: 425px) {
+    section {
+        width: 100%;
+        border-radius: none;
+        box-shadow: none;
+        padding-left: 31px;
+    }
+
+    section img {
+        height: 70px;
+        width: 70px;
+    }
+
+    section p {
+        padding-top: 32px;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .btn {
+        margin-top: 240px;
+    }
+
+}
+
+@media (max-width: 320px) {
+
+    .btn {
+        margin-top: 220px;
+    }
+}
+
+
+
