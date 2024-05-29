@@ -120,8 +120,6 @@ button {
     background-color: hsl(234, 29%, 20%);
     color: hsl(0, 0%, 100%);
     user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
     transition: 0.5s;
 }
 
