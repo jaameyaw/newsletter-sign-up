@@ -196,6 +196,11 @@ button:active {
     .lists li::before {
         bottom: 11px;
     }
+
+    input, button {
+        width: 70%;
+        padding: 12px;
+    }
   
     .imageSvg {
         width: 100%;
