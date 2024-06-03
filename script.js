@@ -5,7 +5,7 @@ let input = document.querySelector('input');
 let newsletterBtn = document.querySelector('.newsletter-btn');
 let emailDomain = 'com';
 let main = document.querySelector('main');
-let userEmail = document.querySelector('.email')
+let userEmail = document.querySelector('.useremail')
 let appreciationPage= document.querySelector('.appreciationPage');
 let mailRegex = /^[a-zA-Z][a-zA-Z0-9\-\_\.]+@[a-zA-Z0-9]{2,}\.[a-zA-Z0-9]{2,}$/;
 
