@@ -23,6 +23,7 @@ main {
     width: 65%;
     background-color: #fff;
     margin: 0 auto;
+    margin-top: 45px;
     border-radius: 1rem;
     display: flex;
     flex-direction: row;
@@ -82,7 +83,6 @@ ul {
     list-style: none;
 }
   
-
 .newsletter-form {
     margin-top: 40px;
 }
@@ -221,12 +221,14 @@ button:active {
 }
 
 
+
 /* appreciation page */
 section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
+    margin-top: 45px;
     width: 430px;
     background-color: hsl(0, 0%, 100%);
     box-shadow: rgba(0, 0, 0, 0.3) -4px 9px 25px -6px;
@@ -273,11 +275,16 @@ section p span {
 
 
 @media (max-width: 425px) {
+    main {
+        margin-top: 0;
+    }
+
     section {
         width: 100%;
         border-radius: none;
         box-shadow: none;
         padding-left: 31px;
+        margin-top: 0;
     }
 
     section img {
