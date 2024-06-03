@@ -1,73 +1,90 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+html {
+    font-size: 62.5%;
+  }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
     font-family: "Roboto", sans-serif;
-    background-color: hsl(235, 18%, 26%);
+    font-weight: 400;
+    color: #181818;
+    background-color: hsl(234, 29%, 20%);
+    padding: 4rem;
+    overflow-x: hidden;
 }
 
-
 main {
+    width: 65%;
+    background-color: #fff;
+    margin: 0 auto;
+    border-radius: 1rem;
     display: flex;
-    border-radius: 20px;
-    background-color: hsl(0, 0%, 100%);
-    height: 76.5vh;
-    box-shadow: rgba(0, 0, 0, 0.3) -4px 9px 25px -6px;
-    
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.3rem;
+}
+
+.imageSvg {
+    background-size: cover;
+    background-position: center;
+    background-image: url("./assets/images/illustration-sign-up-desktop.svg");
+    border-radius: 1.5rem;
+    flex: 1 20%;
 }
 
 .content {
+    padding: 4.5rem;
+    flex: 2;
+}
+
+h1 {
+    font-size: 5.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: hsl(234, 29%, 20%);
+}
+
+p {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.item-container {
     display: flex;
-    flex-direction: column;
-    width: 390px;
-    margin-left: 40px;
-    margin-top: 70px;
-    margin-bottom: -12px;
-}
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.6rem;
+} 
 
-.content h1 {
-    font-size: 45px;
-    padding-bottom: 13px;
-    color: hsl(235, 18%, 26%);
-}
-
-.updates {
-    font-size: 15px;
-    line-height: 1.4;
-    color: hsl(234, 29%, 20%);
+.item-container li {
     font-weight: 500;
-    padding-bottom: 16px;
-   
 }
-
-.lists li {
-    list-style-type: none;
-    padding-bottom: 11px;
-    color: hsl(234, 29%, 20%);
-    font-weight: 500;
-    font-size: 14px;
-    position: relative;
-    margin-left: 40px;   
+.item-container:not(:last-child) {
+    margin-bottom: 1rem;
 }
-
-.lists li::before {
-    content: url("/assets/images/icon-list.svg"); 
-    display: inline-block;
-    position: absolute;
-    bottom: 6px;
-    left: -35px;   
+  
+.item-container .icon {
+    width: 1.5rem;
+    height: 1.5rem;
 }
-
+  
+ul {
+    list-style: none;
+}
+  
 
 .newsletter-form {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .newsletter-form label {
@@ -77,21 +94,23 @@ main {
     font-weight: 700;
 }
 
+.name {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .error-msg {
-    padding-left: 120px;
     line-height: .3;
-    font-size: 13px;
-    /* color: hsl(4, 68%, 45%); */
+    font-size: 14px;
     color: #ff2851;
     display: none;
     font-weight: 500;
-    font-family: "Roboto", sans-serif;
 }
 
 input {
     margin-top: 10px;
     border: 1px solid hsl(231, 7%, 60%);
-    font-family: "Roboto", sans-serif;
     color: black;
     font-weight: 500;
     transition: .4s;
@@ -104,12 +123,11 @@ input:focus {
 
 input::placeholder {
     color: hsl(231, 7%, 60%);
-    font-family: "Roboto", sans-serif;
     font-weight: 500;
 }
 
 input, button {
-    width: 86%;
+    width: 95%;
     padding: 15px;
     border-radius: 6px;  
 }
@@ -133,100 +151,91 @@ button:active {
     transform: scale(0.95);
 }
 
-.imageSvg {
-    width: 340px;
-}
 
-.image {
-    height: 500px;
-    width: 430px;
-    padding-top: 20px;
-    margin-left: -55px;
-}
+@media screen and (max-width: 1270px) {
+    .content {
+        padding: 1.5rem;
+    }
 
-
-@media (max-width: 768px) {
     main {
-        height: 100vh;
-    }
-
-    .image {
-        width: 370px;
-        height: 490px;
+        width: 85%;
     }
 }
 
-@media (max-width: 430px) {
+@media screen and (max-width: 918px) {
+    html {
+        font-size: 55%;
+    }
+    main {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 646px) {
+    body {
+        padding: 0;
+    }
+    .img-container {
+        flex-basis: 10%;
+    }
+}
+
+@media screen and (max-width: 500px) {
     body {
         background-color: white;
-        
     }
+
     main {
-        box-shadow: none;
-        display: grid
-
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 0;
     }
 
-    .content {
-        width: 100%;
-        margin-left: 0;
-        margin-top: 0;
-        margin-bottom: 0;
-        padding-left: 13px;
-    }
-
-    .content h1 {
-        font-size: 35px;
-        margin-top: 31px;
-    }
-
-    .updates {
-        margin-top: 16px;
-        font-size: 17px;
-    }
-
-    .lists {
-        margin-top: 16px;
-    }
-
-    .lists li {
-        padding-bottom: 9px;
-    }
-
-    .lists li::before {
-        bottom: 11px;
-    }
-
-    input, button {
-        width: 70%;
-        padding: 12px;
+    .imageSvg {
+        min-height: 30rem;
+        order: -1;
+        background-image: url("./assets/images/illustration-sign-up-mobile.svg");
+        border-radius: 0 0 2rem 2rem;
     }
   
-    .imageSvg {
-        width: 100%;
-        min-height: 20vh;
-        background-image: url("/assets/images/illustration-sign-up-mobile.svg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-radius: 0 0 17px 17px;
-        grid-row: 1 / 2;
+    h1 {
+        font-size: 5rem;
     }
-
-    .image {
-        display: none;
+ 
+    input, button {
+        width: 85%;
     }
-
 }
 
-/* appreciate */
+@media (min-width: 1024px) {
+    .error-msg {
+        margin-left: 100px;
+    }
+    
+}
+
+@media (min-width: 768px) {
+    .error-msg {
+        margin-left: 90px;
+    }
+}
+
+
+/* appreciation page */
 section {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
     width: 430px;
     background-color: hsl(0, 0%, 100%);
     box-shadow: rgba(0, 0, 0, 0.3) -4px 9px 25px -6px;
     border-radius: 20px;
     padding: 50px 45px;
+}
+
+.hide {
+    display: none;
 }
 
 section img {
@@ -294,6 +303,3 @@ section p span {
         margin-top: 220px;
     }
 }
-
-
-
